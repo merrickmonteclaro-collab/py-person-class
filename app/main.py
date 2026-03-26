@@ -8,6 +8,7 @@ class Person:
 
 
 def create_person_list(people: list) -> list:
+    Person.people.clear()
     person_list = [Person(peeps["name"], peeps["age"]) for peeps in people]
     for peeps in people:
         inst = Person.people[peeps["name"]]
